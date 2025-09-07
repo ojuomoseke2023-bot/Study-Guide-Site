@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Hub</title>
+    
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --primary-color: #004aad; /* Main blue */
+            --secondary-color: #f0f8ff; /* Light blue/white */
+            --text-color: #333;
+            --link-hover: #007bff; /* Brighter blue for hover effect */
+        }
+
+        /* General Body and Layout Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+        
+        /* Container to keep content centered and readable */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header and Navigation Bar */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* Allows nav links to wrap on small screens */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--link-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section (Welcome) */
+        .hero {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        section h3 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Resources Section */
+        .resources-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .resources-list a {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-decoration: none;
+            color: var(--primary-color);
+            display: block;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .resources-list a:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Quizzes and Study Tips Sections */
+        .quizzes-section .button, .study-tips-list li {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+
+        .quizzes-section .button {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .quizzes-section .button:hover {
+            background-color: #e9ecef;
+        }
+
+        .study-tips-list {
+            list-style-type: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        .study-tips-list li {
+            background-color: #f4f4f4;
+            border: none;
+        }
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>📚 Student Study Hub</h1>
+            <nav>
+                <ul>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#quizzes">Quizzes</a></li>
+                    <li><a href="#study-tips">Study Tips</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Your Path to Academic Success</h2>
+            <p>Welcome to Student Study Hub, your one-stop resource for notes, quizzes, and effective study advice to help you ace your exams!</p>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div class="container">
+            <h3>Resources</h3>
+            <ul class="resources-list">
+                <li><a href="#">Biology 101 Notes (PDF)</a></li>
+                <li><a href="#">Algebra II Study Guide (PDF)</a></li>
+                <li><a href="#">World History Key Dates (PDF)</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="quizzes" class="quizzes-section">
+        <div class="container">
+            <h3>Quizzes</h3>
+            <a href="#" class="button">Quiz coming soon!</a>
+        </div>
+    </section>
+    
+    <section id="study-tips">
+        <div class="container">
+            <h3>Study Tips</h3>
+            <ul class="study-tips-list">
+                <li>Create a consistent study schedule and stick to it.</li>
+                <li>Find a quiet and comfortable place to study.</li>
+                <li>Use techniques like the Pomodoro method (25 min study, 5 min break).</li>
+                <li>Review your notes regularly to reinforce learning.</li>
+                <li>Explain concepts to a friend to check your understanding.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h3>About This Project</h3>
+            <p>This simple website was created to demonstrate basic web development skills using HTML and CSS.</p>
+            <p>It was generated by Gemini and can be hosted for free on <a href="https://pages.github.com/" style="color: var(--primary-color);">GitHub Pages</a>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Student Study Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+              </html>
+              
